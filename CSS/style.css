@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #4facfe;
+    flex-direction: column;
+    border: 3px solid black;
+    margin: 10vh;
+    gap: 15px;
+}
+   
+
+.box {
+    width: 40vw;
+    background: #88c6fc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.2);
+}
+
+input,
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+}
