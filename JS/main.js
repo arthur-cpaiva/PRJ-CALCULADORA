@@ -10,37 +10,34 @@ function somar() {
 
     let num1, num2, resCalculo;
 
-    num1 = Number(numero1.value);
-    num2 = Number(numero2.value);
+    if (validarEntradas() === true) { // sem parâmetro e com retorno /*sempre que criar uma função, adicionar o parenteses, mesmo que não tenha nada*/
+        num1 = Number(numero1.value);
+        num2 = Number(numero2.value);
+        resCalculo = num1 + num2;
+        exibirResultado(resCalculo); //com parâmetro e sem retorno
+    } else {
+        mostrarMensagemErro(); //sem parâmetro e sem retorno
+    }
 
-    console.log(isNaN(num1));
-    console.log(isNaN(num2));
-    
-    resCalculo = num1 + num2;
-    resultado.innerHTML = resCalculo;
 }
 
-function validarEntradas() {
-    if (isNaN(numero1.value) || isNaN(numero2.value)) {
-        resultado.innerHTML = "Valores inválidos. Insira novos valores (números)"
+function validarEntradas() { //sem parâmetro e com retorno
+    if (isNaN(numero1.value) || isNaN(numero2.value)) { //com parâmetro e com retorno
         return false
     } else {
         return true
     }
 }
 
-function mostrarMensagemdeErro() {
-    resultado.innerHTML = "Valores inválidos. Insira novos valores (números)"
-}
-
 //O programa começa aqui
 
-if (validarEntradas() == true) {
-    botao.addEventListener("click", somar)
-} else {
-    mostrarMensagemdeErro();
+function mostrarMensagemErro() { //sem parâmetro e com retorno
+    resultado.innerHTML = "Valores inválidos. Insira novos valores (números)";
+}
+
+function exibirResultado(valor) {  //com parâmetro e sem retorno /*sempre que criar uma função, adicionar o parenteses, mesmo que não tenha nada*/
+    resultado.innerHTML = valor;
 }
 
 
-
-botao.addEventListener("click", somar);
+botao.addEventListener("click", somar); //com parâemtro e sem retorno
