@@ -13,6 +13,7 @@ body {
    
 
 .box {
+    display: block;
     width: 40vw;
     background: #88c6fc;
     padding: 20px;
@@ -27,4 +28,13 @@ button {
     margin: 10px auto;
     padding: 10px;
     width: 200px;
+}
+
+.btn-area{
+    display: flex;
+    gap: 30px;
+}
+
+.invisible{
+    display: none;
 }
