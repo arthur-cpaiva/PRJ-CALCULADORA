@@ -115,6 +115,12 @@ function erroDivisao() {
 
 function exibirResultado(valor) {  //com parâmetro e sem retorno /*sempre que criar uma função, adicionar o parenteses, mesmo que não tenha nada*/
     resultado.innerHTML = "Resultado: " + valor;
+
+    if (valor>=0) {
+        resultado.style.color = "#66C726"
+    } else {
+        resultado.style.color = "#DB5E27"
+    }
 }
 
 //O programa começa aqui
@@ -123,3 +129,32 @@ botaoSubtracao.addEventListener("click", subtrair);
 botaoMultiplicacao.addEventListener("click", multiplicar);
 botaoDivisao.addEventListener("click", dividir);
 botaoLimpar.addEventListener("click", limparCampos);
+
+// botaoMultiplicacao.addEventListener("click", ()=>{
+//   let num1, num2, resCalculo;
+//   if (validarEntradas() === true) {
+//     num1 = Number(numero1.value);
+//     num2 = Number(numero2.value);
+//     resCalculo = num1 * num2;
+//     caixaResultado.classList.remove("invisible");
+//     exibirResultado(resCalculo);
+//   } else {
+//     mostrarMensagemErro();
+//   }
+// })
+
+// function dividir() {
+// let num1, num2, resCalculo;
+ 
+//num1 = Number(numero1.value);
+//num2 = Number(numero2.value);
+ 
+//if (num2===0) {
+//alert("Erro! Divisão por zero!");    
+//} else if (validarEntradas() === true) {
+//resCalculo = num1 / num2;
+//caixaResultado.classList.remove("invisible");
+//exibirResultado(resCalculo);    
+//} else {
+//mostrarMensagemErro();    
+//}
